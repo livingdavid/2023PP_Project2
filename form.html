@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input{
+	background-color:green;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/action_page.php" method="post">
+  이름 : <input type="text" name="username"  id = "username" onclick="alert('hello!!!')"><br>
+  비번 : <input type="text" name="pwd"><br>
+  성별 : <input type="radio" name="gender" value="2">여자<input type="radio" name="gender" value="1">남자<br>
+  신입생/복학생 <input type="radio" name="istype">신입생<input type="radio" name="istype">복학생 <br>
+  <input type="submit" value="로그인">
+  <input type="reset" value="새로고침">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
+
