@@ -3,19 +3,32 @@
 <head>
 <style>
 input{
-	background-color:green;
+	background-color:rgb(162, 193, 162);
 }
 </style>
 </head>
 <body>
 
-<h2>HTML Forms</h2>
+<h2> 동아리 희망 선호도 조사 </h2>
 
 <form action="/action_page.php" method="post">
-  이름 : <input type="text" name="username"  id = "username" onclick="alert('hello!!!')"><br>
-  비번 : <input type="text" name="pwd"><br>
+  이름 : <input type="text" name="username"  id = "username" ><br>
   성별 : <input type="radio" name="gender" value="2">여자<input type="radio" name="gender" value="1">남자<br>
   신입생/복학생 <input type="radio" name="istype">신입생<input type="radio" name="istype">복학생 <br>
+  소속 학부 <select>
+    <option value="americano">전산전자</option>
+    <option value="caffe latte"> 경영경제</option>
+    <option value="cafe au lait"> 상담심리</option>
+    <option value="espresso"> 커뮤니케이션</option>
+</select>
+  희망 동아리 분과 : </strong>
+		<input type="checkbox" name="part" value="GY"> 공연분과
+		<input type="checkbox" name="part" value="BS"> 봉사분과
+    <input type="checkbox" name="part" value="HS"> 학술분과
+    <br>
+  활동 시작 가능일 : <input type="date" id="start" name="semes-start" value="2023-09-26" min="2023-01-01" max="2023-12-31" /> <br>
+  <p>희망하는 동아리와 희망사유를 적어주세요.</p>
+  <textarea name="opinion" cols="30" rows="5"></textarea><br>
   <input type="submit" value="로그인">
   <input type="reset" value="새로고침">
 </form> 
