@@ -1,0 +1,22 @@
+/* 스마트폰 화면에 대한 스타일 */
+@media (max-width: 767px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+
+  /* 데스크톱 화면에 대한 스타일 */
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .table-responsive {
+      overflow-x: hidden;
+    }
+  }
+  
