@@ -37,8 +37,8 @@
             <input type="text" class="form-control" id="firstName" placeholder="이름을 입력하세요" value="이민규" required>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastName">학번</label>
-            <input type="text" class="form-control" id="lastName" placeholder="학번을 입력하세요" value="21900504" required>
+            <label for="StuId">학번</label>
+            <input type="text" class="form-control" id="StuId" placeholder="학번을 입력하세요" value="21900504" required>
           </div>
         </div>
 
@@ -70,10 +70,10 @@
     <script>
         function validateForm() {
         var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
+        var StuId = document.getElementById('StuId').value;
         var email = document.getElementById('email').value;
 
-        if (firstName.trim() === '' || lastName.trim() === '' || !isValidEmail(email)) {
+        if (firstName.trim() === '' || StuId.trim() === '' || !isValidEmail(email)) {
           alert('필수 정보를 올바르게 입력하세요.');
           return false;
         }
