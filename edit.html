@@ -30,7 +30,7 @@
 
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">참가자 </h4>
-      <form class="needs-validation" novalidate onsubmit="return validateForm();">
+      <form class="needs-validation" novalidate onsubmit="return validateForm();">  
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">이름</label>
@@ -63,33 +63,38 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="confirmEdit()">수정</button>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="confirmEdit(event)">수정</button>
       </form>
     </div>
     
     <script>
         function validateForm() {
-          var firstName = document.getElementById('firstName').value;
-          var lastName = document.getElementById('lastName').value;
-          var email = document.getElementById('email').value;
-      
-          if (firstName.trim() === '' || lastName.trim() === '' || !isValidEmail(email)) {
-            alert('필수 정보를 올바르게 입력하세요.');
-            return false;
-          }
-      
-          return true;
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+
+        if (firstName.trim() === '' || lastName.trim() === '' || !isValidEmail(email)) {
+          alert('필수 정보를 올바르게 입력하세요.');
+          return false;
         }
-      
-        function isValidEmail(email) {
-          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return emailRegex.test(email);
-        }
-        function confirmEdit() {
-            if (confirm("게시물을 수정할까요?")) {
+
+        return true;
+      }
+
+      function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function confirmEdit(event) {
+        if (validateForm()) {
+          if (confirm("게시물을 수정할까요?")) {
             alert("게시물이 수정되었습니다.");
+          } else {
+            event.preventDefault();
+          }
         }
-        }
+      }
       </script>
   </body>
 </html>
